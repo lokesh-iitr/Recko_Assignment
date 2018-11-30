@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build','-t','gcr.io/white-device-223818/java-image','java-app/']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push','gcr.io/white-device-223818/java-image']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build','-t','gcr.io/white-device-223818/node-image','node-app/']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push','gcr.io/white-device-223818/node-image']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build','-t','gcr.io/white-device-223818/python-app','python-app/']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push','gcr.io/white-device-223818/python-app']

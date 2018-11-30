@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build','-t','gcr.io/white-device-223818/java-image','.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push','gcr.io/white-device-223818/java-image']
